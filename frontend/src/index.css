@@ -196,7 +196,7 @@ a {
   font-size: 14px;
 }
 
-.recipe-card button {
+.recipe-card .recipe-link {
   background-color: var(--color-primary);
   color: var(--color-bg);
   border: none;
@@ -204,6 +204,8 @@ a {
   padding: 12px;
   font-weight: bold;
   margin-top: auto;
+  text-align: center;
+  text-decoration: none;
 }
 
 .recipe-card {
@@ -216,11 +218,11 @@ a {
   box-shadow: 0 8px 24px rgba(52, 211, 153, 0.12);
 }
 
-.recipe-card button {
+.recipe-card .recipe-link{
   transition: background-color 0.2s;
 }
 
-.recipe-card button:hover {
+.recipe-card .recipe-link:hover {
   background-color: #10b981;
 }
 
@@ -407,5 +409,87 @@ a {
 @media (prefers-reduced-motion: reduce) {
   .snowflake {
     display: none;
+  }
+}
+
+/* Page détail de la recette */
+
+.recipe-page {
+  padding: 32px;
+}
+
+.recipe-header {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.recipe-header img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.recipe-info {
+  padding: 24px;
+}
+
+.recipe-info h1 {
+  font-family: Georgia, serif;
+  font-size: 36px;
+  color: var(--color-gold);
+  margin-bottom: 16px;
+}
+
+.recipe-info p {
+  color: var(--color-muted);
+  margin-bottom: 8px;
+}
+
+.recipe-details {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.recipe-ingredients,
+.recipe-instructions {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.recipe-details h2 {
+  font-family: Georgia, serif;
+  color: var(--color-gold);
+  margin-bottom: 20px;
+}
+
+.recipe-details ul,
+.recipe-details ol {
+  padding-left: 24px;
+}
+
+.recipe-details li {
+  color: var(--color-muted);
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.recipe-details li::marker {
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .recipe-details {
+    grid-template-columns: 1fr;
+  }
+
+  .recipe-header img {
+    height: 220px;
   }
 }

@@ -6,16 +6,18 @@ import './index.css';
 import ChristmasDecoration from './components/ChristmasDecoration';
 import { useState, useEffect } from 'react';
 import type { Recipe } from './types/recipe';
+import { Routes, Route } from 'react-router';
+import RecipePage from './components/RecipePage';
 
 function App() {
   const [recipes, setRecipes] = useState<Recipe[]>([]);
 
   useEffect(() => {
-  fetch('http://localhost:3000/api/recipes')
-    .then((response) => response.json())
-    .then((data) => setRecipes(data))
-    .catch((error) => console.error(error));
-}, []);
+    fetch('http://localhost:3000/api/recipes')
+      .then((response) => response.json())
+      .then((data) => setRecipes(data))
+      .catch((error) => console.error(error));
+  }, []);
 
 
   return (
@@ -23,7 +25,10 @@ function App() {
       <Sidebar recipes={recipes} />
       <main>
         <Header />
-        <RecipeList recipes={recipes} />
+        <Routes>
+          <Route path="/" element={<RecipeList recipes={recipes} />} />
+          <Route path="/recipe/:slug" element={<RecipePage recipes={recipes} />} />
+        </Routes>
       </main>
 
       <ChristmasDecoration />

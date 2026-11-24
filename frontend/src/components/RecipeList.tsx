@@ -20,6 +20,7 @@ function RecipeList({ recipes }: RecipeListProps) {
             thumbnail={recipe.thumbnail}
             description={recipe.description}
             preparationTime={recipe.preparationTime}
+            slug={recipe.slug}
           />
         ))}
 

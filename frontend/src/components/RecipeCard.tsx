@@ -1,4 +1,5 @@
 import macaron from '../assets/recipes/Img-macaron-framboisier.png';
+import { NavLink } from 'react-router';
 
 type RecipeCardProps = {
     title: string;
@@ -6,6 +7,7 @@ type RecipeCardProps = {
     thumbnail: string;
     description: string;
     preparationTime?: number;
+    slug: string;
 };
 
 function RecipeCard({
@@ -14,6 +16,7 @@ function RecipeCard({
     thumbnail,
     description,
     preparationTime,
+    slug,
 }: RecipeCardProps) {
     return (
         <article className="recipe-card">
@@ -31,7 +34,9 @@ function RecipeCard({
                         ? `${preparationTime} min`
                         : 'Non renseigné'}
                 </p>
-                <button type="button">Voir la recette</button>
+                <NavLink to={`/recipe/${slug}`} className="recipe-link">
+                    Voir la recette
+                </NavLink>
             </div>
         </article>
     );
