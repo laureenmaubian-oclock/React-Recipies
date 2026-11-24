@@ -1,27 +1,28 @@
 import RecipeCard from './RecipeCard';
+import type { Recipe } from '../types/recipe';
 
-function RecipeList() {
+type RecipeListProps = {
+  recipes: Recipe[];
+};
+
+function RecipeList({ recipes }: RecipeListProps) {
   return (
     <section className="recipe-list">
       <h1>Les recettes O'Recipes</h1>
-      <p>2 recettes disponibles</p>
+      <p>{recipes.length} recettes disponibles</p>
 
       <div className="recipe-grid">
-        <RecipeCard
-          title="Cookies au beurre de cacahuète"
-          difficulty="Facile"
-          thumbnail="https://www.sunny-delices.fr/wp-content/uploads/2022/09/cookies-beurre-cacahouettes-sans-gluten-680x451.jpg"
-          description="Pour 10 cookies"
-          preparationTime={15}
-        />
+        {recipes.map((recipe) => (
+          <RecipeCard
+            key={recipe.id}
+            title={recipe.title}
+            difficulty={recipe.difficulty}
+            thumbnail={recipe.thumbnail}
+            description={recipe.description}
+            preparationTime={recipe.preparationTime}
+          />
+        ))}
 
-        <RecipeCard
-          title="Amandier"
-          difficulty="Facile"
-          thumbnail="https://www.sunny-delices.fr/wp-content/uploads/2020/11/amandier-sans-gluten.jpg"
-          description="Pour 6 personnes"
-          preparationTime={20}
-        />
       </div>
     </section>
   );
