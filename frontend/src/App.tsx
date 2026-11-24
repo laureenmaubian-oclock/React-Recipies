@@ -2,6 +2,8 @@ import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import RecipeList from './components/RecipeList';
 import './App.css';
+import './index.css';
+import ChristmasDecoration from './components/ChristmasDecoration';
 
 function App() {
   return (
@@ -11,6 +13,9 @@ function App() {
         <Header />
         <RecipeList />
       </main>
+
+      <ChristmasDecoration />
+
     </div>
   );
 }
