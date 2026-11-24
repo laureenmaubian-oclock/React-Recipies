@@ -46,6 +46,7 @@ a {
 .app {
   display: flex;
   min-height: 100vh;
+  padding-top: clamp(60px, 8vw, 180px);
 }
 
 .app > main {
@@ -320,6 +321,54 @@ a {
   pointer-events: none;
   overflow: hidden;
   z-index: 10;
+}
+
+/* Guirlande de Noël */
+
+.garland-container {
+  position: absolute;
+  top: -10vw;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
+.christmas-garland {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4));
+}
+
+.garland-light {
+  position: absolute;
+  width: 1.2vw;
+  height: 1.2vw;
+  border-radius: 50%;
+  background-color: #fff3b0;
+  box-shadow:
+    0 0 10px #ffdc73,
+    0 0 20px #ffbf00,
+    0 0 35px #ffbf00;
+  transform: translate(-50%, -50%);
+  animation: garland-twinkle 3s ease-in-out infinite;
+}
+
+@keyframes garland-twinkle {
+  0%, 100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.9;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .garland-light {
+    animation: none;
+    opacity: 0;
+  }
 }
 
 /* Traîneau */
