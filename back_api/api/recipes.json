@@ -68,6 +68,7 @@
     "thumbnail": "http://sunnybakery.fr/wp-content/uploads/2020/09/gateau-entremets-macaron-framboises.jpg",
     "author": "Solène",
     "difficulty": "Difficile",
+    "preparationTime": 45,
     "description": "Pour 8 personnes",
     "ingredients": [
       {
@@ -120,6 +121,7 @@
     "thumbnail": "https://www.sunny-delices.fr/wp-content/uploads/2020/04/tarte-au-citron-meringuee-sans-gluten-680x453.jpg",
     "author": "Solène",
     "difficulty": "Moyen",
+    "preparationTime": 50,
     "description": "Pour 8 à 10 personnes",
     "ingredients": [
       {
@@ -236,6 +238,7 @@
     "thumbnail": "https://www.sunny-delices.fr/wp-content/uploads/2020/11/amandier-sans-gluten.jpg",
     "author": "Solène",
     "difficulty": "Facile",
+    "preparationTime": 20,
     "description": "Pour 6 personnes",
     "ingredients": [
       {
@@ -316,6 +319,7 @@
     "thumbnail": "https://www.sunny-delices.fr/wp-content/uploads/2015/06/fondant-chocolat-sans-gluten.jpg",
     "author": "Solène",
     "difficulty": "Facile",
+    "preparationTime": 15,
     "description": "Pour 8 personnes",
     "ingredients": [
       {
@@ -365,6 +369,7 @@
     "thumbnail": "https://www.sunny-delices.fr/wp-content/uploads/2020/04/banoffee-sans-gluten-1-680x453.jpg",
     "author": "Soso",
     "difficulty": "Facile",
+    "preparationTime": 35,
     "description": "Pour 6 personnes",
     "ingredients": [
       {

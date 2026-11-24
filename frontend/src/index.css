@@ -493,3 +493,36 @@ a {
     height: 220px;
   }
 }
+
+/* Utilisateur connecté */
+
+.logged-user {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logged-user p {
+    color: var(--color-gold);
+    font-weight: bold;
+}
+
+.logged-user button {
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.logged-user button:hover {
+    background-color: #10b981;
+}
+
+.login-message {
+    color: #ef4444;
+    font-size: 14px;
+}
